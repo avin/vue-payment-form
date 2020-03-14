@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -26,13 +26,13 @@
                     id="cc-number"
                     placeholder="XXXX XXXX XXXX XXXX"
                     :value="fields.pan.value"
-                    v-bind:class="{ 'is-invalid': errorFields.has('pan') }"
+                    :class="{ 'is-invalid': errorFields.has('pan') }"
                     v-mask="fields.pan.maskOptions"
                     @accept="fields.pan.onAccept"
                   />
 
                   <div v-if="cardTypeIcon" class="payment-system-logo">
-                    <img src="" alt="" v-bind:src="cardTypeIcon" />
+                    <img src="" alt="" :src="cardTypeIcon" />
                   </div>
                 </div>
               </div>
@@ -46,7 +46,7 @@
                     id="cc-expiry"
                     placeholder="XX / XX"
                     :value="fields.expiry.value"
-                    v-bind:class="{ 'is-invalid': errorFields.has('expiry') }"
+                    :class="{ 'is-invalid': errorFields.has('expiry') }"
                     v-mask="fields.expiry.maskOptions"
                     @accept="fields.expiry.onAccept"
                   />
@@ -59,8 +59,8 @@
                     id="cc-cvc"
                     placeholder="XXX"
                     :value="fields.cvc.value"
-                    v-bind:type="cvcInputType"
-                    v-bind:class="{ 'is-invalid': errorFields.has('cvc') }"
+                    :type="cvcInputType"
+                    :class="{ 'is-invalid': errorFields.has('cvc') }"
                     v-mask="fields.cvc.maskOptions"
                     @accept="fields.cvc.onAccept"
                   />
@@ -75,7 +75,7 @@
                   id="cc-holder"
                   placeholder="CARDHOLDER NAME"
                   :value="fields.holder.value"
-                  v-bind:class="{ 'is-invalid': errorFields.has('holder') }"
+                  :class="{ 'is-invalid': errorFields.has('holder') }"
                   v-mask="fields.holder.maskOptions"
                   @accept="fields.holder.onAccept"
                 />
