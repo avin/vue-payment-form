@@ -1,4 +1,4 @@
-# Payment form
+# Payment form [![Build Status](https://travis-ci.org/avin/vue-payment-form.svg?branch=master)](https://travis-ci.org/avin/vue-payment-form)
 
 Example of a payment form built with [Vue](https://vuejs.org/) and [Bootstrap](https://getbootstrap.com/). 
 
